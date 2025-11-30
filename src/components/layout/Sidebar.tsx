@@ -15,12 +15,14 @@ import {
   Shield,
   ChevronLeft,
   ChevronRight,
+  Info,
 } from "lucide-react";
 import { useAppStore } from "@/stores/useAppStore";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const navigation = [
+  { name: "프로젝트 소개", href: "/about", icon: Info },
   { name: "대시보드", href: "/dashboard", icon: LayoutDashboard },
   { name: "CCTV 모니터링", href: "/monitoring", icon: Video },
   { name: "IoT 센서", href: "/sensors", icon: Gauge },
