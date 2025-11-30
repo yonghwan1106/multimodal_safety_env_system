@@ -45,26 +45,35 @@ export function Sidebar() {
       )}
     >
       {/* Logo */}
-      <div className="flex h-16 items-center justify-between px-4 border-b border-slate-800">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-            <Shield className="w-6 h-6 text-white" />
-          </div>
-          {sidebarOpen && (
-            <div className="flex flex-col">
-              <span className="font-bold text-white text-lg">IMSE-MS</span>
-              <span className="text-xs text-slate-400">관제 시스템</span>
+      <div className="border-b border-slate-800">
+        <div className="flex h-16 items-center justify-between px-4">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <Shield className="w-6 h-6 text-white" />
             </div>
-          )}
-        </Link>
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={toggleSidebar}
-          className="text-slate-400 hover:text-white hover:bg-slate-800"
-        >
-          {sidebarOpen ? <ChevronLeft className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
-        </Button>
+            {sidebarOpen && (
+              <div className="flex flex-col">
+                <span className="font-bold text-white text-lg">IMSE-MS</span>
+                <span className="text-xs text-slate-400">관제 시스템</span>
+              </div>
+            )}
+          </Link>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleSidebar}
+            className="text-slate-400 hover:text-white hover:bg-slate-800"
+          >
+            {sidebarOpen ? <ChevronLeft className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
+          </Button>
+        </div>
+        {sidebarOpen && (
+          <div className="px-4 pb-3">
+            <p className="text-[10px] text-slate-500 leading-tight">
+              한국서부발전 국정과제<br />혁신 아이디어 출품작
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Navigation */}
