@@ -182,7 +182,7 @@ export default function AIGuidePage() {
                     <span className="text-xl mr-3">{scenario.icon}</span>
                     <div>
                       <p className="font-medium text-white">{scenario.name}</p>
-                      <p className="text-xs text-slate-400 line-clamp-1">{scenario.description}</p>
+                      <p className="text-xs text-slate-400 whitespace-pre-line">{scenario.description}</p>
                     </div>
                   </Button>
                 ))}

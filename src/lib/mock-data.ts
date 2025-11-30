@@ -297,28 +297,32 @@ export const scenarios: Scenario[] = [
   {
     id: "scenario-gas",
     name: "가스 누출",
-    description: "D구역에서 가스 누출이 감지되었습니다. 대응 지침을 안내해주세요.",
+    description: "D구역 연료저장 탱크에서
+가스 누출이 감지되었습니다",
     icon: "🔥",
     type: "gas_leak",
   },
   {
     id: "scenario-fire",
     name: "화재 발생",
-    description: "B구역 터빈동에서 연기가 감지되었습니다. 대피 경로를 안내해주세요.",
+    description: "B구역 터빈동에서
+연기가 감지되었습니다",
     icon: "🚨",
     type: "fire",
   },
   {
     id: "scenario-fallen",
     name: "작업자 쓰러짐",
-    description: "C구역에서 작업자가 쓰러진 것으로 감지되었습니다. 응급 대응 지침을 안내해주세요.",
+    description: "C구역 변전설비에서
+작업자가 쓰러졌습니다",
     icon: "🏥",
     type: "fallen_worker",
   },
   {
     id: "scenario-helmet",
     name: "안전모 미착용",
-    description: "A구역에서 안전모 미착용 작업자가 감지되었습니다. 조치 방안을 안내해주세요.",
+    description: "A구역 보일러동에서
+안전모 미착용 감지",
     icon: "⛑️",
     type: "no_helmet",
   },
