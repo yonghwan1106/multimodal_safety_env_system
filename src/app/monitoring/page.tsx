@@ -25,8 +25,8 @@ import { Detection } from "@/lib/types";
 
 // 시뮬레이션용 랜덤 감지 생성
 const detectionTypes = [
-  { type: "person", label: "작업자 감지", icon: User, color: "text-blue-400" },
-  { type: "helmet", label: "안전모 착용", icon: HardHat, color: "text-green-400" },
+  { type: "person", label: "작업자 감지", icon: User, color: "text-blue-400", isAnomaly: false },
+  { type: "helmet", label: "안전모 착용", icon: HardHat, color: "text-green-400", isAnomaly: false },
   { type: "no_helmet", label: "안전모 미착용", icon: HardHat, color: "text-red-400", isAnomaly: true },
   { type: "smoke", label: "연기 감지", icon: Wind, color: "text-orange-400", isAnomaly: true },
 ] as const;
