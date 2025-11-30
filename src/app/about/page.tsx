@@ -39,6 +39,13 @@ import {
 } from "lucide-react";
 
 export default function AboutPage() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <DashboardLayout>
       <div className="space-y-16 pb-12">
@@ -61,11 +68,18 @@ export default function AboutPage() {
               24시간 잠들지 않는 AI가 발전소의 안전과 환경을 지킵니다.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600">
+              <Button
+                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+                onClick={() => scrollToSection("features")}
+              >
                 <Zap className="w-4 h-4 mr-2" />
                 자세히 보기
               </Button>
-              <Button variant="outline" className="border-slate-700 hover:bg-slate-800">
+              <Button
+                variant="outline"
+                className="border-slate-700 hover:bg-slate-800"
+                onClick={() => scrollToSection("roi")}
+              >
                 기대효과 확인
               </Button>
             </div>
@@ -209,7 +223,7 @@ export default function AboutPage() {
         </section>
 
         {/* Features Section */}
-        <section>
+        <section id="features">
           <div className="text-center mb-10">
             <Badge className="mb-4 bg-purple-500/10 text-purple-400 border-purple-500/30">Features</Badge>
             <h2 className="text-3xl font-bold text-white mb-3">핵심 기능</h2>
@@ -351,7 +365,7 @@ export default function AboutPage() {
         </section>
 
         {/* ROI Section */}
-        <section>
+        <section id="roi">
           <div className="text-center mb-10">
             <Badge className="mb-4 bg-green-500/10 text-green-400 border-green-500/30">Expected ROI</Badge>
             <h2 className="text-3xl font-bold text-white mb-3">기대효과</h2>
